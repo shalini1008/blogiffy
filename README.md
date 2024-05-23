@@ -4,8 +4,8 @@ WebPage for everyone how want share out their problem not only problem , but any
 # Backend
 Appwrite
 # Fronted
-React.js
-Tailwind for CSS
+React.js,
+Tailwind for CSS,
 Redux-ToolKit
 # Demo Image
 ![Screenshot 2024-05-23 225947](https://github.com/shalini1008/blogPage/assets/122449558/cd5acfad-9b3f-4cd3-b3de-7742bbdffe73)
