@@ -16,8 +16,7 @@ export {
     Post,
     LogIn,
     Signup,
-<<<<<<< HEAD
+
 }
-=======
+
 }
->>>>>>> 31e556cd5d76624749a72095fe6e33a69157b304
