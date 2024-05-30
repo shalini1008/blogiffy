@@ -1,14 +1,10 @@
-<<<<<<< HEAD
+
 import { Header } from "./Header/Header";
 import { Footer } from "./Footer/Footer";
 import { Logo } from "./Logo";
 import { LogoutBtn } from "./Header/LogoutBtn";
-=======
-import { Header } from "./header/Header";
 import { Footer } from "./footer/Footer";
 import { Logo } from "./Logo";
-import { LogoutBtn } from "./header/LogoutBtn";
->>>>>>> 31e556cd5d76624749a72095fe6e33a69157b304
 import { Container } from "./Container"
 import { Button } from "./Button";
 import Input from "./Input";
