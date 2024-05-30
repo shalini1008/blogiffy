@@ -1,4 +1,4 @@
-import conf from '../conf/conf.js';
+import conf from '../config/config.js';
 import { Client, Account, ID } from "appwrite";
 
 export class AuthService {
@@ -8,7 +8,7 @@ export class AuthService {
     constructor() {
         this.client
             .setEndpoint(conf.appWriteUrl)
-            .setProject(conf.aapWriteProjectId);
+            .setProject(conf.appWriteProjectId);
         this.account = new Account(this.client);
             
     }
@@ -32,7 +32,7 @@ export class AuthService {
     async login({email, password}) {
         // eslint-disable-next-line no-useless-catch
         try {
-            return await this.account.createEmailSession(email, password);
+            return await this.account.createEmailPasswordSession(email, password);
         } catch (error) {
             throw error;
         }

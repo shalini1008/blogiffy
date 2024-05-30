@@ -1,12 +1,14 @@
 // import React from 'react'
-import  { Login  as LoginComponent} from '../components'
+import { Login as LoginComponent} from '../components'
+// import { useDispatch } from 'react-redux'
 
-function Login() {
-  return (
-    <div className='py-8'>
-       <LoginComponent />
-    </div>
-  )
+export function LogIn() {
+    
+
+    return (
+       <div className=' py-8'>
+        <LoginComponent />
+       </div>
+    )
 }
-
-export default Login
+export default LogIn
