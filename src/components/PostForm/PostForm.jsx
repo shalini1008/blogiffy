@@ -151,23 +151,8 @@ export function PostForm({post}) {
               {post ? "Update" : "Submit"}
             </Button>
           </div>
-<<<<<<< HEAD
-          <button
-            type="button"
-            className="w-full p-2 rounded-xl bg-secondary-color text-white mt-4 mb-2 hover:bg-hover-color hover:text-white"
-            onClick={handleClick}
-          >
-            Let AI help in writting post
-          </button>
-          {showElement}
-=======
->>>>>>> 31e556cd5d76624749a72095fe6e33a69157b304
         </div>
       </div>
     </form>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 31e556cd5d76624749a72095fe6e33a69157b304
