@@ -115,9 +115,14 @@ export class Services {
     }
 
     getFilePreview(fileId){
+        try{
         return this.storage.getFilePreview(
             config.appWriteBucketId,
             fileId)
+    }catch(error){
+            console.log("Appwrite service ::getFilePreview :: error", error);
+            return false
+        }
     }
 }
 
