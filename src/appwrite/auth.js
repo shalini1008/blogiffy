@@ -18,10 +18,7 @@ export class AuthService {
         try {
             const id=ID.unique();
             const userAccount = await this.account.create(id,email, password, name);
-            [
-            Permission.read(Role.any()),               
-            Permission.update(Role.any(),      
-            ]
+           
             if (userAccount) {
               
                 return this.login({email, password});
