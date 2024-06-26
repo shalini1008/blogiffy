@@ -14,39 +14,34 @@ export class AuthService {
     }
 
     async createAccount({email, password, name}) {
-        // eslint-disable-next-line no-useless-catch
-        try {
-            const id=ID.unique();
-            const userAccount = await this.account.create(id,email, password, name);
-           
+         try {
+            const userAccount = await this.account.create(ID.unique(), email, password, name);
+            // If the user is successfully created, log them in
             if (userAccount) {
-              
-                return this.login({email, password});
-            } else {
-               return  userAccount;
+                return this.loginAccount({ email, password });
+            }
+            else{
+                return userAccount
             }
         } catch (error) {
-            throw error;
+            throw new Error(`Failed to create account: ${error.message}`);
         }
     }
 
     async login({email, password}) {
-        // eslint-disable-next-line no-useless-catch
-        try {
-            return await this.account.createEmailPasswordSession(email, password);
+         try {
+            return await this.account.createEmailPasswordSession(email,password);
         } catch (error) {
-            throw error;
+            throw new Error(`Failed to login: ${error.message}`);
         }
     }
 
     async getCurrentUser() {
-        // console.log(this)
-        try {
-            return await this.account.get();
+       try {
+            return await this.account.getSession('current');
         } catch (error) {
-            console.log("Appwrite serive :: getCurrentUser :: error", error);
+            throw new Error(`Failed to get account details: ${error.message}`);
         }
-
         return null;
     }
 
@@ -55,9 +50,8 @@ export class AuthService {
         try {
             await this.account.deleteSessions();
         } catch (error) {
-            console.log("Appwrite serive :: logout :: error", error);
+            throw new Error(`Failed to logout: ${error.message}`);
         }
-    }
 }
 
 const authService = new AuthService();
