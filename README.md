@@ -1,7 +1,18 @@
 
 # Blogiffy
 WebPage for everyone how want share out their problem not only problem , but anything person can light his/her heart.
-### 🧠 - What I've learned:
+
+## -Installation
+**1.Clone the repository:**<br>
+ git clone https://github.com/shalini1008/blogiffy.git<br>
+ **2.Navigate to the project directory:**<br>
+ cd blogiffy<br>
+**3.Install the dependencies:**<br>
+ npm install<br>
+**4.Start the development server:**<br>
+ npm run dev<br>
+
+## - What I've learned:
 
 - [Appwrite](https://appwrite.io/)
 
@@ -32,7 +43,7 @@ Redux-ToolKit
 - src/index.css: Stylesheet for the application.
 - src/main.jsx: Entry point of the application.
 
-  ### 🛠️ - Dependencies 
+  ## - Dependencies 
  
  `React` &nbsp; `JavaScript` &nbsp; `Appwrite` &nbsp; `TailwindCSS` &nbsp; `Build tool: Vite` 
  
